@@ -1,5 +1,11 @@
 ### Создаю две виртуальные машины в двух разных зонах доступности: 
 ![Снимок экрана (92)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/4e1edd19-0991-49d5-8cc5-d8a3c4ddba43)
+### Устанавливаю сервер nginx, а также билд сайта на обеих вм, проверяю:
+- Публичный адрес vm-1
+![Снимок экрана (99)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/c62d0940-3f2c-469f-8631-12b757b8495f)
+- Публичный адрес vm-2
+![Снимок экрана (100)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/a304b7ad-31d7-4de7-a451-5f3d937be6aa)
+
 ### Создаю целевую группу(target group) с включением vm-1 и vm-2:
 ![Снимок экрана (93)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/61225c99-079a-4a70-bac4-cf881f895170)
 ### Следующим этапом создаю и настраиваю группу бэкэнда(backend group):
