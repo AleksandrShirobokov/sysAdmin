@@ -1,4 +1,4 @@
-# Создание и настройка ВМ
+# 1. Создание и настройка ВМ
 
 ### Создаю две виртуальные машины в двух разных зонах доступности: 
 ![Снимок экрана (92)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/4e1edd19-0991-49d5-8cc5-d8a3c4ddba43)
@@ -26,7 +26,7 @@
 
 ![Снимок экрана (98)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/2c7bb1a0-d6dd-475d-8c5e-1fb634813430)
 
-# Установка и настройка Zabbix
+# 2. Установка и настройка Zabbix
 
 ### Устанавливаю и настраиваю Zabbix как указано в официальной документации, проверяю сервер, веб-интерфейс, и агент:
 
@@ -41,3 +41,17 @@
 - Vm-2
 
 ![Снимок экрана (103)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/7d217832-c320-4e6b-b641-a8e64463b831)
+
+### Затем подключаю агенты Vm-1 и Vm-2 к Zabbix-серверу:
+
+![Снимок экрана (240)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/43d9a4c9-567a-410c-8412-5981886be3ef)
+
+### Настраиваю дашборды, создаю страницу system и network:
+
+ - System
+
+![Снимок экрана (241)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/ce10b049-8b6c-429d-b3fd-f40e02bb5fc3)
+
+ - Network 
+
+![Снимок экрана (242)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/63e0907a-b6ce-454d-93dc-12380c4e75fc)
