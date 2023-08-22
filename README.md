@@ -33,3 +33,11 @@
 ![Снимок экрана (101)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/d0bb874b-1bc4-4ec6-b149-1334d2f89dc0)
 ![Снимок экрана (102)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/12653398-0ce9-4b43-96eb-2f636d07ab11)
 
+### Устанавливаю и настраиваю Zabbix агент на Vm-1 и Vm-2, проверяю статус:
+- Vm-1
+
+![Снимок экрана (104)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/5555c620-a65b-4af7-ba9e-112c97c140f7)
+  
+- Vm-2
+
+![Снимок экрана (103)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/7d217832-c320-4e6b-b641-a8e64463b831)
