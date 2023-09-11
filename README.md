@@ -55,3 +55,17 @@
  - Network 
 
 ![Снимок экрана (242)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/63e0907a-b6ce-454d-93dc-12380c4e75fc)
+
+# 3. Отправка логов
+
+### Создаю ВМ для установки Elasticsearch:
+
+![Снимок экрана (243)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/531b5834-4087-4368-9740-c1f7e25792b8)
+
+### Устанавливаю и настраиваю Elasticsearch, проверяю:
+
+![Снимок экрана (244)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/9423c6a9-ff21-48b4-8499-c65e7eb9d52c)
+
+### Создаю ВМ для установки Kibana:
+
+![Снимок экрана (243)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/1c4e2655-a7d4-49ef-87c2-26312608e692)
