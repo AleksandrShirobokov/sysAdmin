@@ -77,3 +77,9 @@
 ### 3.5 Проверяю кластер Elasticsearch в Kibana:
 
 ![Снимок экрана (247)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/d1b76114-3f00-498d-aa46-fd9b9adc8f3d)
+
+### 3.6 Устанавливаю и настраиваю filebeat(vm-1 и vm-2) на отправку логов в Elasticsearch, проверяю в Kibana:
+
+![Снимок экрана (248)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/61f89516-45af-4066-8ade-54e2b4c5f8d1)
+
+![Снимок экрана (249)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/0b4a6ced-12b3-4135-a374-104a160dc11d)
