@@ -69,3 +69,11 @@
 ### Создаю ВМ для установки Kibana:
 
 ![Снимок экрана (243)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/1c4e2655-a7d4-49ef-87c2-26312608e692)
+
+### Устанавливаю и настраиваю Kibana, проверяю:
+
+![Снимок экрана (246)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/7bef18fd-c678-4fbb-9bd3-6a647875bd4f)
+
+### Проверяю кластер Elasticsearch в Kibana:
+
+![Снимок экрана (247)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/d1b76114-3f00-498d-aa46-fd9b9adc8f3d)
