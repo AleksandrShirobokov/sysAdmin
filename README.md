@@ -84,3 +84,16 @@
 
 ![Снимок экрана (249)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/0b4a6ced-12b3-4135-a374-104a160dc11d)
 
+# 5. Создание snapshot
+
+### 5.1 - Создаю снимки дисков всех ВМ:
+
+![Снимок экрана (252)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/56a1360e-0017-4d0e-85ec-8f04ae22ba71)
+
+### 5.2 - Произвожу настройку snapshot(ежедневное копирование, срок жизни - одна неделя):
+
+![Снимок экрана (250)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/5a9afae9-cffd-4119-931f-b712db599621)
+
+### 5.3 - Сохраняю настройки:
+
+![Снимок экрана (251)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/42a8ffa4-34cb-4a78-bde5-a40158cdb8c9)
