@@ -58,22 +58,22 @@
 
 # 3. Отправка логов
 
-### Создаю ВМ для установки Elasticsearch:
+###3.1 Создаю ВМ для установки Elasticsearch:
 
 ![Снимок экрана (243)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/531b5834-4087-4368-9740-c1f7e25792b8)
 
-### Устанавливаю и настраиваю Elasticsearch, проверяю:
+###3.2 Устанавливаю и настраиваю Elasticsearch, проверяю:
 
 ![Снимок экрана (244)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/9423c6a9-ff21-48b4-8499-c65e7eb9d52c)
 
-### Создаю ВМ для установки Kibana:
+###3.3 Создаю ВМ для установки Kibana:
 
 ![Снимок экрана (243)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/1c4e2655-a7d4-49ef-87c2-26312608e692)
 
-### Устанавливаю и настраиваю Kibana, проверяю:
+###3.4 Устанавливаю и настраиваю Kibana, проверяю:
 
 ![Снимок экрана (246)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/7bef18fd-c678-4fbb-9bd3-6a647875bd4f)
 
-### Проверяю кластер Elasticsearch в Kibana:
+###3.5 Проверяю кластер Elasticsearch в Kibana:
 
 ![Снимок экрана (247)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/d1b76114-3f00-498d-aa46-fd9b9adc8f3d)
