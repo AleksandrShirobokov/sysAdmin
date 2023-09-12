@@ -44,6 +44,8 @@
 
 ### 2.3 - Затем подключаю агенты Vm-1 и Vm-2 к Zabbix-серверу:
 
+ - Логин и пароль Zabbix: **Admin zabbix**
+
 ![Снимок экрана (240)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/43d9a4c9-567a-410c-8412-5981886be3ef)
 
 ### 2.4 - Настраиваю дашборды, создаю страницу system и network:
