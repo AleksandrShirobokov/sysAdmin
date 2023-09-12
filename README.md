@@ -68,6 +68,8 @@
 
 ### 3.3 - Создаю ВМ для установки Kibana:
 
+ - Логин и пароль Kibana: **elastic vkShZ8RVk6W2Mn9yGJil**
+
 ![Снимок экрана (243)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/1c4e2655-a7d4-49ef-87c2-26312608e692)
 
 ### 3.4 - Устанавливаю и настраиваю Kibana, проверяю:
