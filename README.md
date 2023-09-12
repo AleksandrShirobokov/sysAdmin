@@ -84,6 +84,24 @@
 
 ![Снимок экрана (249)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/0b4a6ced-12b3-4135-a374-104a160dc11d)
 
+### 3.7 - Логи Elasticsearch:
+
+![Снимок экрана (253)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/5383c1ba-83f3-458f-935c-783a0a28623e)
+
+# 4. Сеть
+
+### 4.1 - Создаю группы безопасности:
+
+ - входящий:
+
+![Снимок экрана (254)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/c418e28e-cfcc-4a58-80b6-78709ce4cf90)
+
+
+ - исходящий:
+
+![Снимок экрана (255)](https://github.com/AleksandrShirobokov/sysAdmin/assets/69298696/c72f2e02-9320-40ab-ac49-b88ad078ee63)
+
+
 # 5. Создание snapshot
 
 ### 5.1 - Создаю снимки дисков всех ВМ:
