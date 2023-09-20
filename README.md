@@ -1,3 +1,137 @@
+# Манифест terraform для создания вм на Яндекс.Облако:
+```
+provider "yandex" {
+  token = "****************"
+  cloud_id = "****************"
+  folder_id = "****************"
+  zone = "ru-central1-a"
+}
+
+resource "yandex_vpc_network" "web" {
+  name = "web"
+  folder_id = "****************"
+}
+
+resource "yandex_vpc_subnet" "web-ru-central1-a" {
+  name = "web-ru-central1-a"
+  network_id = yandex_vpc_network.web.id
+  zone = "ru-central1-a"
+  range = "10.128.0.0/24"
+}
+
+resource "yandex_vpc_subnet" "web-ru-central1-b" {
+  name = "web-ru-central1-b"
+  network_id = yandex_vpc_network.web.id
+  zone = "ru-central1-b"
+  range = "10.129.0.0/24"
+}
+
+resource "yandex_compute_instance" "vm-1" {
+  name = "vm-1"
+  platform_id = "Intel-Ice-Lake"
+  cores = 2
+  memory = 1024
+
+  boot_disk {
+    size = 13
+  }
+
+  network_interface {
+    subnet_id = yandex_vpc_subnet.web-ru-central1-a.id
+    nat = true
+    ip_address = "10.128.0.32"
+  }
+
+  public_ip {
+    address = "51.250.85.112"
+  }
+}
+
+resource "yandex_compute_instance" "vm-2" {
+  name = "vm-2"
+  platform_id = "Intel-Ice-Lake"
+  cores = 2
+  memory = 1024
+
+  boot_disk {
+    size = 13
+  }
+
+  network_interface {
+    subnet_id = yandex_vpc_subnet.web-ru-central1-b.id
+    nat = true
+    ip_address = "10.129.0.17"
+  }
+
+  public_ip {
+    address = "158.160.12.119"
+  }
+}
+
+resource "yandex_compute_instance" "zabbix" {
+  name = "zabbix"
+  platform_id = "Intel-Ice-Lake"
+  cores = 2
+  memory = 1024
+
+  boot_disk {
+    size = 13
+  }
+
+  network_interface {
+    subnet_id = yandex_vpc_subnet.web-ru-central1-a.id
+    nat = true
+    ip_address = "10.128.0.8"
+  }
+
+  public_ip {
+    address = "158.160.120.94"
+  }
+}
+
+resource "yandex_compute_instance" "elastic" {
+  name = "elastic"
+  platform_id = "Intel-Ice-Lake"
+  cores = 2
+  memory = 2048 #
+
+  boot_disk {
+    size = 13
+  }
+
+  network_interface {
+    subnet_id = yandex_vpc_subnet.web-ru-central1-a.id
+    nat = true
+    ip_address = "10.128.0.9"
+  }
+
+  public_ip {
+    address = "158.160.121.237"
+  }
+}
+
+resource "yandex_compute_instance" "kibana" {
+  name = "kibana"
+  platform_id = "intel-ice-lake"
+  cores = 2
+  memory = 1024
+
+  boot_disk {
+    size = 13
+  }
+
+  network_interface {
+    subnet_id = yandex_vpc_subnet.web-ru-central1-a.id
+    nat = true
+    ip_address = "10.128.0.16"
+  }
+
+  public_ip {
+    address = "158.160.116.227"
+  }
+}
+
+```
 # 1. Создание и настройка ВМ
 
 ### 1.1 - Создаю две виртуальные машины в двух разных зонах доступности: 
