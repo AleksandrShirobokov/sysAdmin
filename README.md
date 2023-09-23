@@ -130,8 +130,113 @@ resource "yandex_compute_instance" "kibana" {
     address = "158.160.116.227"
   }
 }
+```
+
+# Playbook ansible для установки необходимых компонентов на вм:
 
 ```
+*создаю host.ini для определяния установочных хостов*
+[web-servers]
+vm-1 ansible_host=51.250.85.112 ansible_user=admin ansible_private_key_file=C:\ansible_p_k
+vm-2 ansible_host=158.160.12.119 ansible_user=admin ansible_private_key_file=C:\ansible_p_k
+
+[zabbix]
+zabbix ansible_host=158.160.120.94 ansible_user=admin ansible_private_key_file=C:\ansible_p_k
+
+[elastic]
+elastic ansible_host=158.160.121.237 ansible_user=admin ansible_private_key_file=C:\ansible_p_k
+
+[kibana]
+kibana ansible_host=158.160.116.227 ansible_user=admin ansible_private_key_file=C:\ansible_p_k
+
+*установка плейбуков*
+ansible-playbook -i hosts.ini install_nginx.yml
+ansible-playbook -i hosts.ini install_filebeat.yml
+ansible-playbook -i hosts.ini install_zabbix_agent2.yml
+ansible-playbook -i hosts.ini install_elasticsearch.yml
+ansible-playbook -i hosts.ini install_kibana.yml
+ansible-playbook -i hosts.ini install_zabbix.yml
+
+*установка компонентов на веб-сервера*
+---
+- hosts: web-servers
+  become: yes
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Download and install Filebeat
+      shell: |
+        curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.9.2-amd64.deb
+        sudo dpkg -i filebeat-8.9.2-amd64.deb
+
+    - name: Install Zabbix Agent 2
+      apt:
+        name: zabbix-agent2
+        state: present
+
+*установка заббикс*
+---
+- hosts: zabbix
+  tasks:
+    - name: Install Zabbix
+      become: yes
+      apt:
+        name: zabbix
+        state: present
+
+*установка elasticsearch*
+---
+- hosts: elastic
+  tasks:
+    - name: Install Elasticsearch
+      become: yes
+      apt_repository:
+        repo: deb https://artifacts.elastic.co/packages/8.9.1/apt stable main
+        state: present
+      apt:
+        update_cache: yes
+
+    - name: Install Elasticsearch package signing key
+      become: yes
+      apt_key:
+        url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+        state: present
+
+    - name: Install Elasticsearch
+      become: yes
+      apt:
+        name: elasticsearch
+        state: present
+
+
+*установка kibana*
+---
+- hosts: kibana
+  tasks:
+    - name: Install Kibana
+      become: yes
+      apt_repository:
+        repo: deb https://artifacts.elastic.co/packages/8.9.1/apt stable main
+        state: present
+      apt:
+        update_cache: yes
+
+    - name: Install Kibana package signing key
+      become: yes
+      apt_key:
+        url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+        state: present
+
+    - name: Install Kibana
+      become: yes
+      apt:
+        name: kibana
+        state: present
+```
+
 # 1. Создание и настройка ВМ
 
 ### 1.1 - Создаю две виртуальные машины в двух разных зонах доступности: 
